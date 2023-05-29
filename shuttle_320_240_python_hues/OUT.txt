@@ -1,0 +1,220 @@
+____ Creating rom_async from init file './frame_320_240_rgb_888_shuttle.mem'.
+
+running...
+sum_bpu:         24, bpu_r:       8, bpu_g:       8, bpu_b:       8
+r_mask: 111111110000000000000000
+g_mask: 000000001111111100000000
+b_mask: 000000000000000011111111
+full_r_mask: 111111110000000000000000
+full_g_mask: 000000001111111100000000
+full_b_mask: 000000000000000011111111
+finished reset_rams_flag
+finished populating block_idx ram
+A1: finished converting from rgb to hsv..
+A1:also dumped to output_file_source_hsv_frame.
+A1: now going ahead with calculate_hue_histogram_flag...
+B0: finished calculate_hue_histogram_flag
+starting to dump_hue_hist_full_frame_mem_to_file_flag
+finished dumping... total pixels in the hue hist:           76792
+dumped output_file_gray_hist_full_frame_masked.txt
+B1: hue hist sorting done in     174783 clocks
+
+B1: let's print the sorted by count...
+B1: going ahead with find_excluded_hues_flag...
+finished find_excluded_hues_flag...              68 hues were excluded
+excluded_hues: 011110101000001000000000000001000000000000000000100101111111111111111110000000000000000000000000000000000000000000000000000000000000000000011111111111110111111111111111111111111111
+---------------- colected two milestones: excluded_hues_is_populated and aux_frame_is_populated
+go ahead to calculate masked aux frame and eventually calculate the basepoints
+B3: finished masking the hue hist full frame... sum of remaining pixels:            3851
+B3: starting to sort by hue..
+B1: hue hist sorting done in     159568 clocks
+
+B1: normalizing full frame...
+finished normalizing...
+sum of masked and normalized hue hists: 0.999997 (needs to be close to 1)
+dumping ...
+E0: dumped output_file_masked_rgb_frame.txt
+E0: going ahead with get_color_hists_for_masked_full_frame
+C0: finished build_hue_hist_blocks
+dump_hue_hist_blocks_mem_to_file_flag
+finished dumping blocks hue hists... hue_hist_blocks_sum_C:          76797 (should be exactly width*height)
+dumped output_file_hue_hist_blocks.txt
+C1: finished normalizing blocks and building union mags...
+C1: hue_hist_blocks_norm_sum_C: 63.997439 (needs to be close to 64.0)
+C1: union_mag_sum_C: 3.416178
+start to dump_union_mags_to_file_flag
+finished dumping union mags... sum union_mags: 3.416178
+dumped output_file_hue_hist_blocks.txt
+C1: starting to FIND SS and SD process_union_mag_per_hue_color_range_for_all_blocks_flag
+D0: finished process_union_mag_per_hue_color_range_for_all_blocks_flag...
+D0: loaded S, SS, SH rams.
+D0: going to generate XB ram
+D1: finished calculate_xb_mem_flag
+D1: starting to calculate_var_nominator_flag
+E1: finished get_color_hists_for_masked_full_frame
+E1: going to get_color_hists_for_masked_full_frame
+E2: remaining_pixels_count_red_hist:            3856
+E2: remaining_pixels_count_green_hist:            3840
+E2: remaining_pixels_count_blue_hist:            3834
+E3: basepoint_cap_red=15.062500
+E3: basepoint_cap_green=15.000000
+basepoint_cap_blue=14.976562
+E3: finished with basepoint caps
+E3: going ahead with get_base_points_flag
+E4: red_base_points: 1110000000000000000000000000000000000100000000000000000100000100000100010101010101101101111111111111111010111111111111111111111111111011111101011011011010101011111111110111111111111111111111111111111111111111111111111111111110111011010110110101010100100001
+E4: base_point_count_red:             158    max_base_point_count_red:             256
+E4: green_base_points: 1000000000000001000000000001000000000000000000000000000000000001000000000100010001010101010110101111101111110111010101011011011111111111111111111111111111101111111111111111111111110111111111111111111111111111111111111111111111111111111010110101001000100101
+E4: base_point_count_green:             152    max_base_point_count_green:             256
+E4: blue_base_points: 1000000000000000000000000000000000000000001000000100010000100100101010111110111111111111111111111110111111111011111111111111111111111111011101010110111111011110101111011111111110111111111111111111111111111111111111111111111011011101110101110101101011111111
+E4: base_point_count_blue:             173    max_base_point_count_blue:             256
+---------------------------------------------------
+E5: red_base_points: 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+E5: base_point_count_red:             256    max_base_point_count_red:             256
+E5: green_base_points: 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+E5: base_point_count_green:             256    max_base_point_count_green:             256
+E5: blue_base_points: 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+E5: base_point_count_blue:             256    max_base_point_count_blue:             256
+D2: finished calculate_var_nominator_flag...
+D2: going ahead with calculate_var_flag...
+D3: finished calculate_var_flag
+D3: going ahead with populate_ss_sum_and_var_sum_flag...
+D4: ss_sum: 0.000002    var_sum: 6.888849
+D4: ss_sum: 0.000005    var_sum: 10.749982
+D4: ss_sum: 0.000004    var_sum: 18.000000
+D4: ss_sum: 0.000006    var_sum: 92.959974
+D4: ss_sum: 0.000006    var_sum: 109.666667
+D4: ss_sum: 0.000018    var_sum: 70.286231
+D4: ss_sum: 0.000001    var_sum: 30.249982
+D4: ss_sum: 0.000003    var_sum: 4.249982
+D4: ss_sum: 0.000007    var_sum: 100.916649
+D4: ss_sum: 0.000007    var_sum: 10.687469
+D4: ss_sum: 0.000002    var_sum: 1.555540
+D4: ss_sum: 0.000001    var_sum: 0.000000
+D4: ss_sum: 0.000057    var_sum: 278.050043
+D4: ss_sum: 0.000155    var_sum: 74.804745
+D4: ss_sum: 0.000004    var_sum: 15.200000
+D4: ss_sum: 0.000004    var_sum: 91.249982
+D4: ss_sum: 0.000011    var_sum: 139.947411
+D4: ss_sum: 0.000011    var_sum: 255.742992
+D4: ss_sum: 0.000011    var_sum: 87.283357
+D4: ss_sum: 0.000011    var_sum: 141.288466
+D4: ss_sum: 0.000253    var_sum: 379.915938
+D4: ss_sum: 0.000170    var_sum: 224.463393
+D4: ss_sum: 0.000013    var_sum: 160.055516
+D4: ss_sum: 0.000011    var_sum: 220.569625
+D4: ss_sum: 0.000015    var_sum: 282.124666
+D4: ss_sum: 0.000012    var_sum: 58.526497
+D4: ss_sum: 0.000020    var_sum: 36.249171
+D4: ss_sum: 0.000034    var_sum: 215.716544
+D4: ss_sum: 0.000739    var_sum: 139.303157
+D4: ss_sum: 0.000215    var_sum: 316.082200
+D4: ss_sum: 0.000027    var_sum: 80.938218
+D4: ss_sum: 0.000011    var_sum: 231.279874
+D4: ss_sum: 0.000015    var_sum: 67.249982
+D4: ss_sum: 0.000035    var_sum: 30.222127
+D4: ss_sum: 0.000029    var_sum: 100.159675
+D4: ss_sum: 0.000016    var_sum: 87.581500
+D4: ss_sum: 0.000358    var_sum: 158.401299
+D4: ss_sum: 0.001091    var_sum: 213.941301
+D4: ss_sum: 0.000034    var_sum: 77.497892
+D4: ss_sum: 0.000008    var_sum: 96.848823
+D4: ss_sum: 0.000069    var_sum: 0.000000
+D4: ss_sum: 0.000068    var_sum: 184.193132
+D4: ss_sum: 0.000006    var_sum: 0.000000
+D4: ss_sum: 0.000484    var_sum: 262.662328
+D4: ss_sum: 0.000359    var_sum: 137.091246
+D4: ss_sum: 0.001619    var_sum: 209.230702
+D4: ss_sum: 0.000437    var_sum: 230.621231
+D4: ss_sum: 0.000157    var_sum: 251.656581
+D4: ss_sum: 0.000200    var_sum: 192.956234
+D4: ss_sum: 0.000238    var_sum: 187.192090
+D4: ss_sum: 0.000242    var_sum: 220.195663
+D4: ss_sum: 0.002027    var_sum: 97.552857
+D4: ss_sum: 0.000244    var_sum: 102.567034
+D4: ss_sum: 0.000096    var_sum: 73.466409
+D4: ss_sum: 0.000912    var_sum: 331.839979
+D4: ss_sum: 0.000621    var_sum: 358.604411
+D4: ss_sum: 0.001172    var_sum: 213.362976
+D4: ss_sum: 0.000699    var_sum: 161.431603
+D4: ss_sum: 0.000524    var_sum: 93.626216
+D4: ss_sum: 0.000579    var_sum: 78.864119
+D4: ss_sum: 0.000342    var_sum: 300.856803
+D4: ss_sum: 0.000194    var_sum: 125.271901
+D4: ss_sum: 0.000815    var_sum: 171.927623
+D4: ss_sum: 0.000545    var_sum: 263.628087
+D4: finished populate_ss_sum_and_var_sum_flag...
+D4: starting build_nondominated_blocks_bus_flag...
+D5: fnished calculating nondominated_blocks bus
+D5: nondominated_blocks: 0000000111001000001000000010000000000000000100000000000000000000
+D5: going ahead to sort vv_sum_ram...
+D6: ss_sum sorting done in      32805 clocks
+D6: total_blocks_needed:              30, dominated_blocks_needed:              23
+D6: going ahead with get_most_significant_block_idxs_flag ..
+D7:most_significant_block_idxs: 1111111111111111111110110011000000110000001100000010000000000000
+---------------- colected two milestones: most_significant_block_idxs_is_populated and base_points_are_populated
+go ahead to the encoder
+ENCODER Controller: ---------------block counter              13, block_global_row:              1, block_global_col:              5, encoder_start_pixel_address:           9800, encoder_end_pixel_address:          19120
+ENCODER Controller: ---------------block counter              20, block_global_row:              2, block_global_col:              4, encoder_start_pixel_address:          19360, encoder_end_pixel_address:          28680
+ENCODER Controller: ---------------block counter              21, block_global_row:              2, block_global_col:              5, encoder_start_pixel_address:          19400, encoder_end_pixel_address:          28720
+ENCODER Controller: ---------------block counter              28, block_global_row:              3, block_global_col:              4, encoder_start_pixel_address:          28960, encoder_end_pixel_address:          38280
+ENCODER Controller: ---------------block counter              29, block_global_row:              3, block_global_col:              5, encoder_start_pixel_address:          29000, encoder_end_pixel_address:          38320
+ENCODER Controller: ---------------block counter              36, block_global_row:              4, block_global_col:              4, encoder_start_pixel_address:          38560, encoder_end_pixel_address:          47880
+ENCODER Controller: ---------------block counter              37, block_global_row:              4, block_global_col:              5, encoder_start_pixel_address:          38600, encoder_end_pixel_address:          47920
+ENCODER Controller: ---------------block counter              40, block_global_row:              5, block_global_col:              0, encoder_start_pixel_address:          48000, encoder_end_pixel_address:          57320
+ENCODER Controller: ---------------block counter              41, block_global_row:              5, block_global_col:              1, encoder_start_pixel_address:          48040, encoder_end_pixel_address:          57360
+ENCODER Controller: ---------------block counter              43, block_global_row:              5, block_global_col:              3, encoder_start_pixel_address:          48120, encoder_end_pixel_address:          57440
+ENCODER Controller: ---------------block counter              44, block_global_row:              5, block_global_col:              4, encoder_start_pixel_address:          48160, encoder_end_pixel_address:          57480
+ENCODER Controller: ---------------block counter              45, block_global_row:              5, block_global_col:              5, encoder_start_pixel_address:          48200, encoder_end_pixel_address:          57520
+ENCODER Controller: ---------------block counter              46, block_global_row:              5, block_global_col:              6, encoder_start_pixel_address:          48240, encoder_end_pixel_address:          57560
+ENCODER Controller: ---------------block counter              47, block_global_row:              5, block_global_col:              7, encoder_start_pixel_address:          48280, encoder_end_pixel_address:          57600
+ENCODER Controller: ---------------block counter              48, block_global_row:              6, block_global_col:              0, encoder_start_pixel_address:          57600, encoder_end_pixel_address:          66920
+ENCODER Controller: ---------------block counter              49, block_global_row:              6, block_global_col:              1, encoder_start_pixel_address:          57640, encoder_end_pixel_address:          66960
+ENCODER Controller: ---------------block counter              50, block_global_row:              6, block_global_col:              2, encoder_start_pixel_address:          57680, encoder_end_pixel_address:          67000
+ENCODER Controller: ---------------block counter              51, block_global_row:              6, block_global_col:              3, encoder_start_pixel_address:          57720, encoder_end_pixel_address:          67040
+ENCODER Controller: ---------------block counter              52, block_global_row:              6, block_global_col:              4, encoder_start_pixel_address:          57760, encoder_end_pixel_address:          67080
+ENCODER Controller: ---------------block counter              53, block_global_row:              6, block_global_col:              5, encoder_start_pixel_address:          57800, encoder_end_pixel_address:          67120
+ENCODER Controller: ---------------block counter              54, block_global_row:              6, block_global_col:              6, encoder_start_pixel_address:          57840, encoder_end_pixel_address:          67160
+ENCODER Controller: ---------------block counter              55, block_global_row:              6, block_global_col:              7, encoder_start_pixel_address:          57880, encoder_end_pixel_address:          67200
+ENCODER Controller: ---------------block counter              56, block_global_row:              7, block_global_col:              0, encoder_start_pixel_address:          67200, encoder_end_pixel_address:          76520
+ENCODER Controller: ---------------block counter              57, block_global_row:              7, block_global_col:              1, encoder_start_pixel_address:          67240, encoder_end_pixel_address:          76560
+ENCODER Controller: ---------------block counter              58, block_global_row:              7, block_global_col:              2, encoder_start_pixel_address:          67280, encoder_end_pixel_address:          76600
+ENCODER Controller: ---------------block counter              59, block_global_row:              7, block_global_col:              3, encoder_start_pixel_address:          67320, encoder_end_pixel_address:          76640
+ENCODER Controller: ---------------block counter              60, block_global_row:              7, block_global_col:              4, encoder_start_pixel_address:          67360, encoder_end_pixel_address:          76680
+ENCODER Controller: ---------------block counter              61, block_global_row:              7, block_global_col:              5, encoder_start_pixel_address:          67400, encoder_end_pixel_address:          76720
+ENCODER Controller: ---------------block counter              62, block_global_row:              7, block_global_col:              6, encoder_start_pixel_address:          67440, encoder_end_pixel_address:          76760
+ENCODER Controller: ---------------block counter              63, block_global_row:              7, block_global_col:              7, encoder_start_pixel_address:          67480, encoder_end_pixel_address:          76800
+ENCODER: finished mapping           36000 pixels in total.
+ENCODER: starting to decode..
+DECODER Controller: ---------------block counter              13, block_global_row:              1, block_global_col:              5, decoder_start_pixel_address:           9800, decoder_end_pixel_address:          19120
+DECODER Controller: ---------------block counter              20, block_global_row:              2, block_global_col:              4, decoder_start_pixel_address:          19360, decoder_end_pixel_address:          28680
+DECODER Controller: ---------------block counter              21, block_global_row:              2, block_global_col:              5, decoder_start_pixel_address:          19400, decoder_end_pixel_address:          28720
+DECODER Controller: ---------------block counter              28, block_global_row:              3, block_global_col:              4, decoder_start_pixel_address:          28960, decoder_end_pixel_address:          38280
+DECODER Controller: ---------------block counter              29, block_global_row:              3, block_global_col:              5, decoder_start_pixel_address:          29000, decoder_end_pixel_address:          38320
+DECODER Controller: ---------------block counter              36, block_global_row:              4, block_global_col:              4, decoder_start_pixel_address:          38560, decoder_end_pixel_address:          47880
+DECODER Controller: ---------------block counter              37, block_global_row:              4, block_global_col:              5, decoder_start_pixel_address:          38600, decoder_end_pixel_address:          47920
+DECODER Controller: ---------------block counter              40, block_global_row:              5, block_global_col:              0, decoder_start_pixel_address:          48000, decoder_end_pixel_address:          57320
+DECODER Controller: ---------------block counter              41, block_global_row:              5, block_global_col:              1, decoder_start_pixel_address:          48040, decoder_end_pixel_address:          57360
+DECODER Controller: ---------------block counter              43, block_global_row:              5, block_global_col:              3, decoder_start_pixel_address:          48120, decoder_end_pixel_address:          57440
+DECODER Controller: ---------------block counter              44, block_global_row:              5, block_global_col:              4, decoder_start_pixel_address:          48160, decoder_end_pixel_address:          57480
+DECODER Controller: ---------------block counter              45, block_global_row:              5, block_global_col:              5, decoder_start_pixel_address:          48200, decoder_end_pixel_address:          57520
+DECODER Controller: ---------------block counter              46, block_global_row:              5, block_global_col:              6, decoder_start_pixel_address:          48240, decoder_end_pixel_address:          57560
+DECODER Controller: ---------------block counter              47, block_global_row:              5, block_global_col:              7, decoder_start_pixel_address:          48280, decoder_end_pixel_address:          57600
+DECODER Controller: ---------------block counter              48, block_global_row:              6, block_global_col:              0, decoder_start_pixel_address:          57600, decoder_end_pixel_address:          66920
+DECODER Controller: ---------------block counter              49, block_global_row:              6, block_global_col:              1, decoder_start_pixel_address:          57640, decoder_end_pixel_address:          66960
+DECODER Controller: ---------------block counter              50, block_global_row:              6, block_global_col:              2, decoder_start_pixel_address:          57680, decoder_end_pixel_address:          67000
+DECODER Controller: ---------------block counter              51, block_global_row:              6, block_global_col:              3, decoder_start_pixel_address:          57720, decoder_end_pixel_address:          67040
+DECODER Controller: ---------------block counter              52, block_global_row:              6, block_global_col:              4, decoder_start_pixel_address:          57760, decoder_end_pixel_address:          67080
+DECODER Controller: ---------------block counter              53, block_global_row:              6, block_global_col:              5, decoder_start_pixel_address:          57800, decoder_end_pixel_address:          67120
+DECODER Controller: ---------------block counter              54, block_global_row:              6, block_global_col:              6, decoder_start_pixel_address:          57840, decoder_end_pixel_address:          67160
+DECODER Controller: ---------------block counter              55, block_global_row:              6, block_global_col:              7, decoder_start_pixel_address:          57880, decoder_end_pixel_address:          67200
+DECODER Controller: ---------------block counter              56, block_global_row:              7, block_global_col:              0, decoder_start_pixel_address:          67200, decoder_end_pixel_address:          76520
+DECODER Controller: ---------------block counter              57, block_global_row:              7, block_global_col:              1, decoder_start_pixel_address:          67240, decoder_end_pixel_address:          76560
+DECODER Controller: ---------------block counter              58, block_global_row:              7, block_global_col:              2, decoder_start_pixel_address:          67280, decoder_end_pixel_address:          76600
+DECODER Controller: ---------------block counter              59, block_global_row:              7, block_global_col:              3, decoder_start_pixel_address:          67320, decoder_end_pixel_address:          76640
+DECODER Controller: ---------------block counter              60, block_global_row:              7, block_global_col:              4, decoder_start_pixel_address:          67360, decoder_end_pixel_address:          76680
+DECODER Controller: ---------------block counter              61, block_global_row:              7, block_global_col:              5, decoder_start_pixel_address:          67400, decoder_end_pixel_address:          76720
+DECODER Controller: ---------------block counter              62, block_global_row:              7, block_global_col:              6, decoder_start_pixel_address:          67440, decoder_end_pixel_address:          76760
+DECODER Controller: ---------------block counter              63, block_global_row:              7, block_global_col:              7, decoder_start_pixel_address:          67480, decoder_end_pixel_address:          76800
+DECODER: finished decoding           36000 pixels
+dumping output_file_decoded_rgb.txt
+FINISHED ________________ at          23851384000
